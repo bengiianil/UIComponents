@@ -13,6 +13,8 @@ class MainViewBuilder {
         
         let viewModel = MainViewModel()
         let viewController = MainViewController(viewModel: viewModel)
+        viewController.title = "Main"
+        viewController.tabBarItem.image = TabBarImages.home.value
         return viewController
     }
 }

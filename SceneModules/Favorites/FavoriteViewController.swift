@@ -1,15 +1,16 @@
 //
-//  MainViewController.swift
+//  FavoriteViewController.swift
 //  UIComponents
 //
 //  Created by Bengi on 5.10.2021.
 //
 
-import Foundation
+import UIKit
 
-class MainViewController: BaseViewController<MainViewModel> {
+class FavoriteViewController: BaseViewController<FavoriteViewModel> {
     
     override func prepareViewControllerConfiguraitons() {
         super.prepareViewControllerConfiguraitons()
+        view.backgroundColor = .yellow
     }
 }
