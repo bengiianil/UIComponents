@@ -24,6 +24,6 @@ class BaseView: UIView {
         setupViewConfigurations()
     }
     
-    func addMajorViewComponents(){}
-    func setupViewConfigurations(){}
+    func addMajorViewComponents() {}
+    func setupViewConfigurations() {}
 }

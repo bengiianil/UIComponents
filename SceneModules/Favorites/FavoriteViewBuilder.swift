@@ -15,6 +15,7 @@ class FavoriteViewBuilder{
         let viewController = FavoriteViewController(viewModel: viewModel)
         viewController.title = "Favorite"
         viewController.tabBarItem.image = TabBarImages.favorite.value
+        viewController.tabBarItem.selectedImage = TabBarImages.favoriteSelected.value
         return viewController
     }
 }

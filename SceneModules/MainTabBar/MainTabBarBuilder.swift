@@ -15,8 +15,9 @@ import UIKit
          let favoriteViewController = FavoriteViewBuilder.build()
          
          let tabViewController = MainTabBarController()
-         tabViewController.items = [mainViewController, favoriteViewController]
+         tabViewController.viewControllers = [mainViewController, favoriteViewController]
          tabViewController.tabBar.backgroundColor = .systemBackground
+         tabViewController.tabBar.tintColor = .black
          return tabViewController
      }
  }

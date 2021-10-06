@@ -34,12 +34,22 @@ class MainViewController: BaseViewController<MainViewModel> {
     }
     
     @objc func buttonAction(_ sender: UIButton) {
+        
+        fireCharacterListView()
+        
+        /** These tasks handled below with fireCharacterListView() func
         print("Push Button Pressed.")
         let viewController = TestViewController()
         viewController.title = "Navigation Bar"
         // self.navigationController?.pushViewController(viewController, animated: true)
         let newNavigationController = UINavigationController(rootViewController: viewController)
-        newNavigationController.navigationBar.backgroundColor = .blue
+        newNavigationController.navigationBar.backgroundColor = .red
         self.present(newNavigationController, animated: true, completion: nil)
+         */
+    }
+    
+    private func fireCharacterListView() {
+        let characterListView = CharacterListViewBuilder.build()
+        self.navigationController?.pushViewController(characterListView, animated: true)
     }
 }

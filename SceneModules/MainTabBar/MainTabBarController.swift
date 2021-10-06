@@ -9,10 +9,10 @@ import UIKit
 
  class MainTabBarController: UITabBarController, UITabBarControllerDelegate {
      
-    var items = [UIViewController]()
+    // var items = [UIViewController]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.viewControllers = items
+        // self.viewControllers = items
     }
 }
