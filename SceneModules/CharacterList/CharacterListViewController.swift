@@ -14,9 +14,13 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
     override func prepareViewControllerConfiguraitons() {
         super.prepareViewControllerConfiguraitons()
         addItemListView()
+        subscribeViewModelListeners()
+        
+        // To access the data
+        viewModel.getCharacterList()
     }
     
-    func addItemListView() {
+    private func addItemListView() {
         
         itemListView = ItemListView()
         itemListView.translatesAutoresizingMaskIntoConstraints = false
@@ -32,6 +36,17 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
             itemListView.topAnchor.constraint(equalTo: view.topAnchor),
             itemListView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
         ])
+    }
+    
+    private func subscribeViewModelListeners() {
+        viewModel.subscribeState { [weak self] state in
+            switch state {
+            case .done:
+                print("Data is ready.")
+            case .loading:
+                print("Data is getting.")
+            }
+        }
     }
 }
 
