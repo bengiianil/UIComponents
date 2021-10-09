@@ -9,8 +9,8 @@ import UIKit
 
 class FavoriteViewController: BaseViewController<FavoriteViewModel> {
     
-    override func prepareViewControllerConfiguraitons() {
-        super.prepareViewControllerConfiguraitons()
+    override func prepareViewControllerConfigurations() {
+        super.prepareViewControllerConfigurations()
         view.backgroundColor = .yellow
     }
 }

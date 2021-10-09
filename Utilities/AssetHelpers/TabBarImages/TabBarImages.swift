@@ -15,6 +15,8 @@ enum TabBarImages: String, GenericValueProtocol {
         return UIImage(imageLiteralResourceName: rawValue)
     }
     
+    case bug = "bug"
+    case bugSelected = "bugSelected"
     case favorite = "favorite"
     case favoriteSelected = "favoriteSelected"
     case home = "home"

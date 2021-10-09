@@ -47,6 +47,14 @@
 		36C30B4427107988008218BA /* MarvelCharactersApiServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B4327107988008218BA /* MarvelCharactersApiServiceProvider.swift */; };
 		36C30B46271079FD008218BA /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B45271079FD008218BA /* BaseRequest.swift */; };
 		36C30B48271080EB008218BA /* CharacterListViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B47271080EB008218BA /* CharacterListViewState.swift */; };
+		36C30B512710B3E1008218BA /* FirstPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B502710B3E1008218BA /* FirstPageViewController.swift */; };
+		36C30B532710B3F0008218BA /* SecondPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B522710B3F0008218BA /* SecondPageViewController.swift */; };
+		36C30B572710B409008218BA /* ThirdPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B562710B409008218BA /* ThirdPageViewController.swift */; };
+		36C30B592710B425008218BA /* ForthPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B582710B425008218BA /* ForthPageViewController.swift */; };
+		36C30B5B2710B42C008218BA /* FifthPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B5A2710B42C008218BA /* FifthPageViewController.swift */; };
+		36C30B5F2710B7A2008218BA /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B5E2710B7A2008218BA /* TutorialViewController.swift */; };
+		36C30B612710B7C6008218BA /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B602710B7C6008218BA /* TutorialViewModel.swift */; };
+		36C30B632710B7CF008218BA /* TutorialViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B622710B7CF008218BA /* TutorialViewBuilder.swift */; };
 		36DCC4DB270C98D000DBFAFE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4DA270C98D000DBFAFE /* TestViewController.swift */; };
 		36DCC4DF270CA6A900DBFAFE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4DE270CA6A900DBFAFE /* MainTabBarController.swift */; };
 		36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4E0270CA6D500DBFAFE /* MainTabBarBuilder.swift */; };
@@ -117,6 +125,14 @@
 		36C30B4327107988008218BA /* MarvelCharactersApiServiceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCharactersApiServiceProvider.swift; sourceTree = "<group>"; };
 		36C30B45271079FD008218BA /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
 		36C30B47271080EB008218BA /* CharacterListViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListViewState.swift; sourceTree = "<group>"; };
+		36C30B502710B3E1008218BA /* FirstPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPageViewController.swift; sourceTree = "<group>"; };
+		36C30B522710B3F0008218BA /* SecondPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondPageViewController.swift; sourceTree = "<group>"; };
+		36C30B562710B409008218BA /* ThirdPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPageViewController.swift; sourceTree = "<group>"; };
+		36C30B582710B425008218BA /* ForthPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForthPageViewController.swift; sourceTree = "<group>"; };
+		36C30B5A2710B42C008218BA /* FifthPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPageViewController.swift; sourceTree = "<group>"; };
+		36C30B5E2710B7A2008218BA /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		36C30B602710B7C6008218BA /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
+		36C30B622710B7CF008218BA /* TutorialViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewBuilder.swift; sourceTree = "<group>"; };
 		36DCC4DA270C98D000DBFAFE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		36DCC4DE270CA6A900DBFAFE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		36DCC4E0270CA6D500DBFAFE /* MainTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarBuilder.swift; sourceTree = "<group>"; };
@@ -155,10 +171,10 @@
 		364F73A0270C67F80047D23D = {
 			isa = PBXGroup;
 			children = (
-				36C14094270F427B00988429 /* Models */,
 				36B8E14D270C84A200801F62 /* BaseComponents */,
 				36A05FB5270E049200F48D99 /* Components */,
 				36A05FD3270E2C3300F48D99 /* Managers */,
+				36C14094270F427B00988429 /* Models */,
 				36DCC4DC270CA66700DBFAFE /* SceneModules */,
 				36DCC4E2270CA73300DBFAFE /* Temporary */,
 				36B8E142270C84A200801F62 /* Utilities */,
@@ -370,11 +386,40 @@
 		36C14099270F51A800988429 /* MarvelModel */ = {
 			isa = PBXGroup;
 			children = (
-				36C14097270F42A500988429 /* MarvelCharactersResponse.swift */,
-				36C30B4327107988008218BA /* MarvelCharactersApiServiceProvider.swift */,
 				36C30B45271079FD008218BA /* BaseRequest.swift */,
+				36C30B4327107988008218BA /* MarvelCharactersApiServiceProvider.swift */,
+				36C14097270F42A500988429 /* MarvelCharactersResponse.swift */,
 			);
 			path = MarvelModel;
+			sourceTree = "<group>";
+		};
+		36C30B492710B37A008218BA /* Jumping */ = {
+			isa = PBXGroup;
+			children = (
+				36C30B502710B3E1008218BA /* FirstPageViewController.swift */,
+				36C30B522710B3F0008218BA /* SecondPageViewController.swift */,
+				36C30B562710B409008218BA /* ThirdPageViewController.swift */,
+				36C30B582710B425008218BA /* ForthPageViewController.swift */,
+				36C30B5A2710B42C008218BA /* FifthPageViewController.swift */,
+			);
+			path = Jumping;
+			sourceTree = "<group>";
+		};
+		36C30B5C2710B6B6008218BA /* Tutorial */ = {
+			isa = PBXGroup;
+			children = (
+				36C30B622710B7CF008218BA /* TutorialViewBuilder.swift */,
+				36C30B5E2710B7A2008218BA /* TutorialViewController.swift */,
+				36C30B602710B7C6008218BA /* TutorialViewModel.swift */,
+			);
+			path = Tutorial;
+			sourceTree = "<group>";
+		};
+		36C30B5D2710B6D5008218BA /* GenericImageContainer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = GenericImageContainer;
 			sourceTree = "<group>";
 		};
 		36DCC4DC270CA66700DBFAFE /* SceneModules */ = {
@@ -382,9 +427,12 @@
 			children = (
 				36A05FAE270DFEFC00F48D99 /* CharacterList */,
 				36DCC55D270CB37D00DBFAFE /* Favorites */,
+				36C30B5D2710B6D5008218BA /* GenericImageContainer */,
+				36C30B492710B37A008218BA /* Jumping */,
 				36B8E15B270C851100801F62 /* Main */,
 				36DCC4DD270CA67600DBFAFE /* MainTabBar */,
 				36A05FA7270DF7CB00F48D99 /* TableView */,
+				36C30B5C2710B6B6008218BA /* Tutorial */,
 			);
 			path = SceneModules;
 			sourceTree = "<group>";
@@ -555,11 +603,14 @@
 			files = (
 				36DCC563270CB3CF00DBFAFE /* FavoriteViewBuilder.swift in Sources */,
 				36A05FC2270E26BB00F48D99 /* ItemTableViewCell.swift in Sources */,
+				36C30B512710B3E1008218BA /* FirstPageViewController.swift in Sources */,
+				36C30B592710B425008218BA /* ForthPageViewController.swift in Sources */,
 				36B8E15F270C853100801F62 /* MainViewBuilder.swift in Sources */,
 				36C14098270F42A500988429 /* MarvelCharactersResponse.swift in Sources */,
 				36C30B48271080EB008218BA /* CharacterListViewState.swift in Sources */,
 				364F73B1270C67F80047D23D /* ViewController.swift in Sources */,
 				36A05FC4270E279000F48D99 /* BaseTableViewCell.swift in Sources */,
+				36C30B572710B409008218BA /* ThirdPageViewController.swift in Sources */,
 				36B8E157270C84A200801F62 /* GenericValueProtocol.swift in Sources */,
 				36B8E15A270C84A200801F62 /* BaseView.swift in Sources */,
 				36A05FBB270E07C100F48D99 /* SampleTest.swift in Sources */,
@@ -575,7 +626,10 @@
 				36A05FD0270E2B5500F48D99 /* CustomImageViewComponentData.swift in Sources */,
 				36B8E156270C84A200801F62 /* FontManager.swift in Sources */,
 				36DCC4DF270CA6A900DBFAFE /* MainTabBarController.swift in Sources */,
+				36C30B5B2710B42C008218BA /* FifthPageViewController.swift in Sources */,
+				36C30B632710B7CF008218BA /* TutorialViewBuilder.swift in Sources */,
 				36A05FB4270DFF8200F48D99 /* CharacterListViewModel.swift in Sources */,
+				36C30B612710B7C6008218BA /* TutorialViewModel.swift in Sources */,
 				36A05FB0270DFF2300F48D99 /* CharacterListViewController.swift in Sources */,
 				36A05FB8270E04BE00F48D99 /* ItemListView.swift in Sources */,
 				36A05FBD270E1D4C00F48D99 /* ItemListProtocol.swift in Sources */,
@@ -583,6 +637,7 @@
 				36A05FD1270E2B5500F48D99 /* CustomImageViewComponent.swift in Sources */,
 				36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */,
 				36A05FCF270E2B5500F48D99 /* CustomImageViewComponentContainer.swift in Sources */,
+				36C30B5F2710B7A2008218BA /* TutorialViewController.swift in Sources */,
 				36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */,
 				364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */,
 				36A05FB2270DFF5900F48D99 /* CharacterListViewBuilder.swift in Sources */,
@@ -591,6 +646,7 @@
 				36DCC561270CB3B700DBFAFE /* FavoriteViewModel.swift in Sources */,
 				36B8E161270C854000801F62 /* MainViewModel.swift in Sources */,
 				36DCC55C270CB27400DBFAFE /* TabBarImages.swift in Sources */,
+				36C30B532710B3F0008218BA /* SecondPageViewController.swift in Sources */,
 				36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */,
 				36A05FD2270E2B5500F48D99 /* CustomImageLoadingType.swift in Sources */,
 			);

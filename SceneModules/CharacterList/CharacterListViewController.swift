@@ -11,8 +11,8 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
 
     private var itemListView: ItemListView!
     
-    override func prepareViewControllerConfiguraitons() {
-        super.prepareViewControllerConfiguraitons()
+    override func prepareViewControllerConfigurations() {
+        super.prepareViewControllerConfigurations()
         addItemListView()
         subscribeViewModelListeners()
         

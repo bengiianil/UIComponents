@@ -22,8 +22,8 @@ class MainViewController: BaseViewController<MainViewModel> {
         return button
     }()
     
-    override func prepareViewControllerConfiguraitons() {
-        super.prepareViewControllerConfiguraitons()
+    override func prepareViewControllerConfigurations() {
+        super.prepareViewControllerConfigurations()
         view.backgroundColor = .green
         view.addSubview(button)
         

@@ -18,10 +18,10 @@ class BaseViewController<V>: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        prepareViewControllerConfiguraitons()
+        prepareViewControllerConfigurations()
     }
     
-    func prepareViewControllerConfiguraitons() {
+    func prepareViewControllerConfigurations() {
         view.backgroundColor = .white
     }
 }
