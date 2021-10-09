@@ -11,9 +11,14 @@ class TutorialViewBuilder {
     
     class func build() -> UIViewController {
         
-        let viewModel = TutorialViewModel()
+        let viewModel = TutorialViewModel(tutorials: [
+            GenericContainerData(containerTitle: "Page1", containerPageIndex: 0, image: PageViewImages.page1.value),
+            GenericContainerData(containerTitle: "Page2", containerPageIndex: 1, image: PageViewImages.page2.value),
+            GenericContainerData(containerTitle: "Page3", containerPageIndex: 2, image: PageViewImages.page3.value),
+        ])
+            
         let viewController = TutorialViewController(viewModel: viewModel)
-        let navigationViewController = UINavigationController(rootViewController: viewController)
-        return navigationViewController
+        
+        return viewController
     }
 }

@@ -31,6 +31,8 @@ class MainViewController: BaseViewController<MainViewModel> {
             button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
+        
+        subscribeViewModelPublishers()
     }
     
     @objc func buttonAction(_ sender: UIButton) {
@@ -52,4 +54,15 @@ class MainViewController: BaseViewController<MainViewModel> {
         let characterListView = CharacterListViewBuilder.build()
         self.navigationController?.pushViewController(characterListView, animated: true)
     }
+    
+    private func subscribeViewModelPublishers() {
+        viewModel.listenTutorialEvent { [weak self] in
+            self?.fireTutorialView()
+        }
+    }
+    
+    private func fireTutorialView() {
+         guard let topViewController = UIApplication.topViewController() else { return }
+         topViewController.present(TutorialViewBuilder.build(), animated: true, completion: nil)
+     }
 }
