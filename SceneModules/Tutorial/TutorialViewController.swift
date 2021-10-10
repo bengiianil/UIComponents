@@ -11,7 +11,7 @@ import UIKit
 class TutorialViewController: BaseViewController<TutorialViewModel> {
 
     private var pageViewController: UIPageViewController!
-    private var pageViewIndex = 0
+    private var pageViewIndex = -1
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
@@ -63,7 +63,7 @@ extension TutorialViewController: UIPageViewControllerDataSource {
         
         var index = controller.viewModel.getPageIndex()
         index += 1
-        if index == 0 { return nil }
+        if index == viewModel.getItemCount() { return nil }
         
         return getViewControllers(at: index)
     }
