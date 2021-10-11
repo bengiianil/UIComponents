@@ -10,10 +10,16 @@ import DefaultNetworkOperationPackage
 
 class CharacterListViewModel {
     
+    deinit {
+        print("DEINIT: CharacterListViewModel")
+    }
+    
+    private let formatter: CharacterListDataFormatterProtocol
+    private var data: CharacterDataResponse?
     private var state: CharacterListViewStateBlock?
     
-    init() {
-        
+    init(formatter: CharacterListDataFormatterProtocol) {
+        self.formatter = formatter
     }
     
     func subscribeState(completion: @escaping CharacterListViewStateBlock) {
@@ -21,10 +27,12 @@ class CharacterListViewModel {
     }
     
     func getCharacterList() {
-        state?(.loading)
         
+        state?(.loading)
+        fireApiCall(with: apiCallHandler)
+        
+        /**
         DispatchQueue.main.asyncAfter(deadline: .now()+2) { [weak self] in
-            
             self?.fireApiCall { [weak self] result in
                 switch result {
                 case .success(let response):
@@ -35,11 +43,12 @@ class CharacterListViewModel {
                 self?.state?(.done)
             }
         }
+        */
     }
     
     private func fireApiCall(with completion: @escaping (Result<CharacterDataResponse, ErrorResponse>) -> Void) {
         /**
-         guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters?ts=8F46CC9B-4885-4D8D-9761-9092B84D4C5A&apikey=b1b6a2c675b36a5e44800a4fbaa2fb8e&hash=68cb7ec069de76b37db17dc7e2aa5b5c&offset=30&limit=30") else { return }
+         guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters?ts=8F46CC9B-4885-4D8D-9761-9092B84D4C5A&apikey=b1b6a2c675b36a5e44800a4fbaa2fb8e&hash=68cb7ec069de76b37db17dc7e2aa5b5c&offset=0&limit=30") else { return }
          
          var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60)
          request.httpMethod = "GET"
@@ -51,9 +60,25 @@ class CharacterListViewModel {
         do {
             let urlRequest = try MarvelCharactersApiServiceProvider().returnUrlRequest()
             APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
-            
-        }   catch let error {
-            print("error: \(error)")
+        } catch let error {
+            print("error : \(error)")
+        }
+    }
+    
+    private func dataHandler(with response: CharacterDataResponse) {
+        self.data = response
+        state?(.done)
+    }
+    
+    // MARK: - CallBack Listener
+    private lazy var apiCallHandler: (Result<CharacterDataResponse, ErrorResponse>) -> Void = { [weak self] result in
+        // to show how to handle error .....
+        switch result {
+        case .failure(let error):
+            print("error : \(error)")
+            self?.state?(.failure)
+        case .success(let data):
+            self?.dataHandler(with: data)
         }
     }
 }
@@ -64,10 +89,14 @@ extension CharacterListViewModel: ItemListProtocol {
     }
     
     func getNumberOfItem(in section: Int) -> Int {
-        return 0
+        // return 0
+        guard let dataUnwrapped = data else { return 0 }
+        return dataUnwrapped.data.results.count
     }
     
     func getData(at index: Int) -> GenericDataProtocol? {
-        return nil
+        // return nil
+        guard let dataUnwrapped = data else { return nil }
+        return formatter.getItem(from: dataUnwrapped.data.results[index])
     }
 }

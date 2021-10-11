@@ -21,12 +21,14 @@ class ItemListView: BaseView {
         view.translatesAutoresizingMaskIntoConstraints = false
         view.delegate = self
         view.dataSource = self
+        view.estimatedRowHeight = UITableView.automaticDimension
         view.register(ItemTableViewCell.self, forCellReuseIdentifier: ItemTableViewCell.identifier )
         return view
     }()
     
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
+        addTableView()
     }
     
     func addTableView() {
@@ -41,7 +43,10 @@ class ItemListView: BaseView {
     }
     
     func reloadTableView() {
-        tableView.reloadData()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+            print("ReloadData is done.")
+        }
     }
 }
 

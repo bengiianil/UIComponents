@@ -29,12 +29,17 @@ class ItemTableViewCell: BaseTableViewCell {
         return stackView
     }()
     
-    private lazy var imageViewComponent: CustomImageViewComponent = {
+    private lazy var imageViewComponent: CustomImageViewComponentContainer = {
         
-        let view = CustomImageViewComponent()
+        let view = CustomImageViewComponentContainer()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.heightAnchor.constraint(equalToConstant: 50).isActive = true
         view.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        view.layer.cornerRadius = 4
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 0, height: 2)
+        view.layer.shadowRadius = 4
+        view.layer.shadowOpacity = 0.6
         return view
     }()
     
@@ -74,7 +79,9 @@ class ItemTableViewCell: BaseTableViewCell {
         // Type Casting
         // If data is an ItemTableViewCellData type, we print it; if not, its not our task
         guard let data = value as? ItemTableViewCellData else { return }
-        imageViewComponent.setData(componentData: data.imageData)
+        imageViewComponent.setData(by: data.imageData)
         cellInfoComponent.setData(by: data.cellInfo)
     }
+    
+    
 }

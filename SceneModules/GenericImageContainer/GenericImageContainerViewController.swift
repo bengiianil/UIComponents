@@ -13,6 +13,7 @@ class GenericImageContainerViewController: BaseViewController<GenericImageContai
     private lazy var imageView: UIImageView = {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFill
         return image
     }()
     

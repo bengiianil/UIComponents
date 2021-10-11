@@ -9,17 +9,24 @@ import UIKit
 
 class CharacterListViewController: BaseViewController<CharacterListViewModel> {
 
+    deinit {
+        print("DEINIT: CharacterListViewController")
+    }
+    
     private var itemListView: ItemListView!
     
     override func prepareViewControllerConfigurations() {
         super.prepareViewControllerConfigurations()
+        
+        // Adding major components
         addItemListView()
+        
+        // Listen view states
         subscribeViewModelListeners()
         
         // To access the data
         viewModel.getCharacterList()
     }
-    
     private func addItemListView() {
         
         itemListView = ItemListView()
@@ -39,12 +46,17 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
     }
     
     private func subscribeViewModelListeners() {
+        
         viewModel.subscribeState { [weak self] state in
             switch state {
             case .done:
                 print("Data is ready.")
+                self?.itemListView.reloadTableView()
             case .loading:
                 print("Data is getting.")
+            case .failure:
+                print("Error")
+                // show alert popup
             }
         }
     }

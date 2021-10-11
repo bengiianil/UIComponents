@@ -13,6 +13,7 @@ class CustomImageViewComponentContainer: GenericBaseView<CustomImageViewComponen
         let temp = CustomImageViewComponent()
         temp.translatesAutoresizingMaskIntoConstraints = false
         temp.clipsToBounds = true
+        temp.layer.cornerRadius = 4
         return temp
     }()
     

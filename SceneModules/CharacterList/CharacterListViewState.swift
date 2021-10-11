@@ -10,6 +10,9 @@ import Foundation
 typealias CharacterListViewStateBlock = (CharacterListViewState) -> Void
 
 enum CharacterListViewState {
-    case done
+    
     case loading
+    case done
+    case failure
+    
 }
