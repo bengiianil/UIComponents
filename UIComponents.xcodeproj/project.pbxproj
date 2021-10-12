@@ -42,10 +42,6 @@
 		36A05FC4270E279000F48D99 /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FC3270E279000F48D99 /* BaseTableViewCell.swift */; };
 		36A05FC8270E2AE400F48D99 /* LabelPackComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FC6270E2AE400F48D99 /* LabelPackComponentData.swift */; };
 		36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */; };
-		36A05FCF270E2B5500F48D99 /* CustomImageViewComponentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FCB270E2B5500F48D99 /* CustomImageViewComponentContainer.swift */; };
-		36A05FD0270E2B5500F48D99 /* CustomImageViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FCC270E2B5500F48D99 /* CustomImageViewComponentData.swift */; };
-		36A05FD1270E2B5500F48D99 /* CustomImageViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FCD270E2B5500F48D99 /* CustomImageViewComponent.swift */; };
-		36A05FD2270E2B5500F48D99 /* CustomImageLoadingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FCE270E2B5500F48D99 /* CustomImageLoadingType.swift */; };
 		36A05FD6270E2C5200F48D99 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */; };
 		36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */; };
 		36B8E156270C84A200801F62 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14C270C84A200801F62 /* FontManager.swift */; };
@@ -64,6 +60,11 @@
 		36C30B5F2710B7A2008218BA /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B5E2710B7A2008218BA /* TutorialViewController.swift */; };
 		36C30B612710B7C6008218BA /* TutorialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B602710B7C6008218BA /* TutorialViewModel.swift */; };
 		36C30B632710B7CF008218BA /* TutorialViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36C30B622710B7CF008218BA /* TutorialViewBuilder.swift */; };
+		36CBC1222715C7E900D26507 /* LabelPackDistributionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC1212715C7E900D26507 /* LabelPackDistributionData.swift */; };
+		36CBC12A2715E4D600D26507 /* CustomImageViewComponentContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC1262715E4D600D26507 /* CustomImageViewComponentContainer.swift */; };
+		36CBC12B2715E4D600D26507 /* CustomImageViewComponentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC1272715E4D600D26507 /* CustomImageViewComponentData.swift */; };
+		36CBC12C2715E4D600D26507 /* CustomImageViewComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC1282715E4D600D26507 /* CustomImageViewComponent.swift */; };
+		36CBC12D2715E4D600D26507 /* CustomImageLoadingType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CBC1292715E4D600D26507 /* CustomImageLoadingType.swift */; };
 		36DCC4DB270C98D000DBFAFE /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4DA270C98D000DBFAFE /* TestViewController.swift */; };
 		36DCC4DF270CA6A900DBFAFE /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4DE270CA6A900DBFAFE /* MainTabBarController.swift */; };
 		36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC4E0270CA6D500DBFAFE /* MainTabBarBuilder.swift */; };
@@ -129,10 +130,6 @@
 		36A05FC3270E279000F48D99 /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
 		36A05FC6270E2AE400F48D99 /* LabelPackComponentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPackComponentData.swift; sourceTree = "<group>"; };
 		36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPackComponent.swift; sourceTree = "<group>"; };
-		36A05FCB270E2B5500F48D99 /* CustomImageViewComponentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentContainer.swift; sourceTree = "<group>"; };
-		36A05FCC270E2B5500F48D99 /* CustomImageViewComponentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentData.swift; sourceTree = "<group>"; };
-		36A05FCD270E2B5500F48D99 /* CustomImageViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponent.swift; sourceTree = "<group>"; };
-		36A05FCE270E2B5500F48D99 /* CustomImageLoadingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageLoadingType.swift; sourceTree = "<group>"; };
 		36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellData.swift; sourceTree = "<group>"; };
 		36B8E14C270C84A200801F62 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
@@ -151,6 +148,11 @@
 		36C30B5E2710B7A2008218BA /* TutorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
 		36C30B602710B7C6008218BA /* TutorialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewModel.swift; sourceTree = "<group>"; };
 		36C30B622710B7CF008218BA /* TutorialViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewBuilder.swift; sourceTree = "<group>"; };
+		36CBC1212715C7E900D26507 /* LabelPackDistributionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelPackDistributionData.swift; sourceTree = "<group>"; };
+		36CBC1262715E4D600D26507 /* CustomImageViewComponentContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentContainer.swift; sourceTree = "<group>"; };
+		36CBC1272715E4D600D26507 /* CustomImageViewComponentData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponentData.swift; sourceTree = "<group>"; };
+		36CBC1282715E4D600D26507 /* CustomImageViewComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageViewComponent.swift; sourceTree = "<group>"; };
+		36CBC1292715E4D600D26507 /* CustomImageLoadingType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomImageLoadingType.swift; sourceTree = "<group>"; };
 		36DCC4DA270C98D000DBFAFE /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		36DCC4DE270CA6A900DBFAFE /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		36DCC4E0270CA6D500DBFAFE /* MainTabBarBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarBuilder.swift; sourceTree = "<group>"; };
@@ -286,7 +288,7 @@
 		36A05FB5270E049200F48D99 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				36A05FCA270E2B5500F48D99 /* CustomImageViewComponent */,
+				36CBC1252715E4D600D26507 /* CustomImageViewComponent */,
 				36A05FC0270E26A300F48D99 /* ItemComponents */,
 				36A05FB6270E049F00F48D99 /* ItemListViewComponents */,
 				36A05FC5270E2AE400F48D99 /* LabelPackComponent */,
@@ -326,19 +328,9 @@
 			children = (
 				36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */,
 				36A05FC6270E2AE400F48D99 /* LabelPackComponentData.swift */,
+				36CBC1212715C7E900D26507 /* LabelPackDistributionData.swift */,
 			);
 			path = LabelPackComponent;
-			sourceTree = "<group>";
-		};
-		36A05FCA270E2B5500F48D99 /* CustomImageViewComponent */ = {
-			isa = PBXGroup;
-			children = (
-				36A05FCB270E2B5500F48D99 /* CustomImageViewComponentContainer.swift */,
-				36A05FCC270E2B5500F48D99 /* CustomImageViewComponentData.swift */,
-				36A05FCD270E2B5500F48D99 /* CustomImageViewComponent.swift */,
-				36A05FCE270E2B5500F48D99 /* CustomImageLoadingType.swift */,
-			);
-			path = CustomImageViewComponent;
 			sourceTree = "<group>";
 		};
 		36A05FD3270E2C3300F48D99 /* Managers */ = {
@@ -447,6 +439,17 @@
 				36604E502712076900383A36 /* PageViewDataProtocol.swift */,
 			);
 			path = GenericImageContainer;
+			sourceTree = "<group>";
+		};
+		36CBC1252715E4D600D26507 /* CustomImageViewComponent */ = {
+			isa = PBXGroup;
+			children = (
+				36CBC1262715E4D600D26507 /* CustomImageViewComponentContainer.swift */,
+				36CBC1282715E4D600D26507 /* CustomImageViewComponent.swift */,
+				36CBC1272715E4D600D26507 /* CustomImageViewComponentData.swift */,
+				36CBC1292715E4D600D26507 /* CustomImageLoadingType.swift */,
+			);
+			path = CustomImageViewComponent;
 			sourceTree = "<group>";
 		};
 		36DCC4DC270CA66700DBFAFE /* SceneModules */ = {
@@ -645,17 +648,19 @@
 				36B8E159270C84A200801F62 /* GenericBaseView.swift in Sources */,
 				36A05FBF270E1E5200F48D99 /* GenericDataProtocol.swift in Sources */,
 				36C30B46271079FD008218BA /* BaseRequest.swift in Sources */,
+				36CBC12A2715E4D600D26507 /* CustomImageViewComponentContainer.swift in Sources */,
 				366B66D92714AE2D00AAA57E /* MainViewModel.swift in Sources */,
 				36604E5527121CFE00383A36 /* PageViewImages.swift in Sources */,
 				36DCC4DB270C98D000DBFAFE /* TestViewController.swift in Sources */,
 				366B66DD2714AE7900AAA57E /* CharacterListDataFormatterProtocol.swift in Sources */,
 				36C30B4427107988008218BA /* MarvelCharactersApiServiceProvider.swift in Sources */,
+				36CBC1222715C7E900D26507 /* LabelPackDistributionData.swift in Sources */,
 				36A05FC8270E2AE400F48D99 /* LabelPackComponentData.swift in Sources */,
 				36DCC55F270CB39B00DBFAFE /* FavoriteViewController.swift in Sources */,
 				36B8E158270C84A200801F62 /* BaseViewController.swift in Sources */,
 				364F73AD270C67F80047D23D /* AppDelegate.swift in Sources */,
+				36CBC12C2715E4D600D26507 /* CustomImageViewComponent.swift in Sources */,
 				36604E5327120D5100383A36 /* GenericContainerData.swift in Sources */,
-				36A05FD0270E2B5500F48D99 /* CustomImageViewComponentData.swift in Sources */,
 				36B8E156270C84A200801F62 /* FontManager.swift in Sources */,
 				36DCC4DF270CA6A900DBFAFE /* MainTabBarController.swift in Sources */,
 				36C30B5B2710B42C008218BA /* FifthPageViewController.swift in Sources */,
@@ -668,10 +673,8 @@
 				36604E4D2712073800383A36 /* GenericImageContainerBuilder.swift in Sources */,
 				36A05FBD270E1D4C00F48D99 /* ItemListProtocol.swift in Sources */,
 				36A05FD6270E2C5200F48D99 /* ImageCacheManager.swift in Sources */,
-				36A05FD1270E2B5500F48D99 /* CustomImageViewComponent.swift in Sources */,
 				36604E512712076900383A36 /* PageViewDataProtocol.swift in Sources */,
 				36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */,
-				36A05FCF270E2B5500F48D99 /* CustomImageViewComponentContainer.swift in Sources */,
 				366B66D72714AE2D00AAA57E /* CharacterListViewBuilder.swift in Sources */,
 				36C30B5F2710B7A2008218BA /* TutorialViewController.swift in Sources */,
 				36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */,
@@ -679,12 +682,13 @@
 				36A05FAD270DF8C100F48D99 /* TableViewController.swift in Sources */,
 				36DCC561270CB3B700DBFAFE /* FavoriteViewModel.swift in Sources */,
 				366B66D82714AE2D00AAA57E /* MainViewController.swift in Sources */,
+				36CBC12D2715E4D600D26507 /* CustomImageLoadingType.swift in Sources */,
 				366B66D52714AE2D00AAA57E /* CharacterListViewState.swift in Sources */,
 				36DCC55C270CB27400DBFAFE /* TabBarImages.swift in Sources */,
 				36C30B532710B3F0008218BA /* SecondPageViewController.swift in Sources */,
 				366B66D42714AE2D00AAA57E /* CharacterListViewController.swift in Sources */,
 				36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */,
-				36A05FD2270E2B5500F48D99 /* CustomImageLoadingType.swift in Sources */,
+				36CBC12B2715E4D600D26507 /* CustomImageViewComponentData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

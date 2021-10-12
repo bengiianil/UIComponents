@@ -31,10 +31,10 @@ class CustomImageViewComponentContainer: GenericBaseView<CustomImageViewComponen
             customImageView.trailingAnchor.constraint(equalTo: trailingAnchor),
             customImageView.topAnchor.constraint(equalTo: topAnchor),
             customImageView.bottomAnchor.constraint(equalTo: bottomAnchor),
-        
+            
         ])
     }
-
+    
     override func loadDataView() {
         super.loadDataView()
         guard let data = returnData() else { return }

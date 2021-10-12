@@ -49,6 +49,13 @@ class LabelPackComponent: GenericBaseView<LabelPackComponentData> {
         return subtitle
     }()
     
+    override func setupViewConfigurations() {
+        super.setupViewConfigurations()
+        setMainStackView()
+        setupTitleConfigurations()
+        setupSubtitleConfigurations()
+    }
+    
     override func addMajorViewComponents() {
         super.addMajorViewComponents()
         addUserComponents()
@@ -77,5 +84,30 @@ class LabelPackComponent: GenericBaseView<LabelPackComponentData> {
         
         titleLabel.text = data.title
         subtitleLabel.text = data.subtitle
+    }
+    
+    private func setMainStackView() {
+        guard let data = returnData() else { return }
+
+        mainStackView.alignment = data.stackViewAlignment
+        mainStackView.spacing = data.spacing
+    }
+    
+    private func setupTitleConfigurations() {
+        guard let data = returnData() else { return }
+        
+        titleLabel.lineBreakMode = data.titleLabelDistributionData.lineBreakMode
+        titleLabel.numberOfLines = data.titleLabelDistributionData.numberOfLines
+        titleLabel.contentMode = data.titleLabelDistributionData.contentMode
+        titleLabel.textAlignment = data.titleLabelDistributionData.textAlignment
+    }
+    
+    private func setupSubtitleConfigurations() {
+        guard let data = returnData() else { return }
+        
+        subtitleLabel.lineBreakMode = data.subtitleLabelDistributionData.lineBreakMode
+        subtitleLabel.numberOfLines = data.subtitleLabelDistributionData.numberOfLines
+        subtitleLabel.contentMode = data.subtitleLabelDistributionData.contentMode
+        subtitleLabel.textAlignment = data.subtitleLabelDistributionData.textAlignment
     }
 }

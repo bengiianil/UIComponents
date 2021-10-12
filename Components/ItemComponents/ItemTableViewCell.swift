@@ -11,7 +11,6 @@ import UIKit
 class ItemTableViewCell: BaseTableViewCell {
     
     private var containerView: UIView = {
-        
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
@@ -45,7 +44,7 @@ class ItemTableViewCell: BaseTableViewCell {
     
     private lazy var cellInfoComponent: LabelPackComponent = {
         
-        let label = LabelPackComponent()
+        let label = LabelPackComponent(data: getLabelPackComponentData())
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -83,5 +82,21 @@ class ItemTableViewCell: BaseTableViewCell {
         cellInfoComponent.setData(by: data.cellInfo)
     }
     
+    private func getLabelPackComponentData() -> LabelPackComponentData {
+        return LabelPackComponentData()
+            .setStackViewAlignment(by: .fill)
+            .setSpacing(by: 5)
+            .setTitleLabelDistributionData(by: LabelPackDistributionData()
+                                            .setLineBreakMode(by: .byTruncatingTail)
+                                            .setNumberOfLines(by:  1)
+                                            .setContentMode(by: .left)
+                                            .setTextAlignment(by: .left))
+            .setSubtitleLabelDistributionData(by: LabelPackDistributionData()
+                                            .setLineBreakMode(by: .byTruncatingTail)
+                                            .setNumberOfLines(by:  2)
+                                            .setContentMode(by: .left)
+                                            .setTextAlignment(by: .left))
+       
+    }
     
 }
