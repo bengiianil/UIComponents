@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		361206E92717029C00DF683C /* UserDefaultsWrapperHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206E82717029C00DF683C /* UserDefaultsWrapperHelper.swift */; };
+		361206EB2717054700DF683C /* TutorialViewInfoStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206EA2717054700DF683C /* TutorialViewInfoStore.swift */; };
+		361206EE2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206ED2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift */; };
+		361206F0271706E600DF683C /* ApplicationGeneralInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206EF271706E600DF683C /* ApplicationGeneralInfoManager.swift */; };
+		361206F32717462D00DF683C /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 361206F22717462D00DF683C /* RxCocoa */; };
+		361206F52717462D00DF683C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 361206F42717462D00DF683C /* RxRelay */; };
+		361206F72717462D00DF683C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 361206F62717462D00DF683C /* RxSwift */; };
+		361206FA271746D600DF683C /* CharacterListOperationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */; };
 		364F73AD270C67F80047D23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73AC270C67F80047D23D /* AppDelegate.swift */; };
 		364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73AE270C67F80047D23D /* SceneDelegate.swift */; };
 		364F73B1270C67F80047D23D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73B0270C67F80047D23D /* ViewController.swift */; };
@@ -92,6 +100,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		361206E82717029C00DF683C /* UserDefaultsWrapperHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsWrapperHelper.swift; sourceTree = "<group>"; };
+		361206EA2717054700DF683C /* TutorialViewInfoStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialViewInfoStore.swift; sourceTree = "<group>"; };
+		361206ED2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoProtocol.swift; sourceTree = "<group>"; };
+		361206EF271706E600DF683C /* ApplicationGeneralInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoManager.swift; sourceTree = "<group>"; };
+		361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsProtocol.swift; sourceTree = "<group>"; };
 		364F73A9270C67F80047D23D /* UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364F73AC270C67F80047D23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		364F73AE270C67F80047D23D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -167,6 +180,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361206F52717462D00DF683C /* RxRelay in Frameworks */,
+				361206F32717462D00DF683C /* RxCocoa in Frameworks */,
+				361206F72717462D00DF683C /* RxSwift in Frameworks */,
 				36A05FA6270DEAE000F48D99 /* DefaultNetworkOperationPackage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -188,6 +204,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		361206E72717026900DF683C /* UserDefaultsHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				361206E82717029C00DF683C /* UserDefaultsWrapperHelper.swift */,
+				361206EA2717054700DF683C /* TutorialViewInfoStore.swift */,
+			);
+			path = UserDefaultsHelpers;
+			sourceTree = "<group>";
+		};
+		361206EC2717065800DF683C /* UserDefaultsHelperManagers */ = {
+			isa = PBXGroup;
+			children = (
+				361206ED2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift */,
+				361206EF271706E600DF683C /* ApplicationGeneralInfoManager.swift */,
+			);
+			path = UserDefaultsHelperManagers;
+			sourceTree = "<group>";
+		};
+		361206F82717469200DF683C /* CharacterListOperationsManagers */ = {
+			isa = PBXGroup;
+			children = (
+				361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */,
+			);
+			path = CharacterListOperationsManagers;
+			sourceTree = "<group>";
+		};
 		364F73A0270C67F80047D23D = {
 			isa = PBXGroup;
 			children = (
@@ -258,10 +300,10 @@
 			children = (
 				366B66DC2714AE7900AAA57E /* CharacterListDataFormatter.swift */,
 				366B66DB2714AE7900AAA57E /* CharacterListDataFormatterProtocol.swift */,
-				366B66CC2714AE2D00AAA57E /* CharacterListViewController.swift */,
-				366B66CD2714AE2D00AAA57E /* CharacterListViewState.swift */,
-				366B66CE2714AE2D00AAA57E /* CharacterListViewModel.swift */,
 				366B66CF2714AE2D00AAA57E /* CharacterListViewBuilder.swift */,
+				366B66CC2714AE2D00AAA57E /* CharacterListViewController.swift */,
+				366B66CE2714AE2D00AAA57E /* CharacterListViewModel.swift */,
+				366B66CD2714AE2D00AAA57E /* CharacterListViewState.swift */,
 			);
 			path = CharacterList;
 			sourceTree = "<group>";
@@ -269,9 +311,9 @@
 		366B66D02714AE2D00AAA57E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				366B66D32714AE2D00AAA57E /* MainViewBuilder.swift */,
 				366B66D12714AE2D00AAA57E /* MainViewController.swift */,
 				366B66D22714AE2D00AAA57E /* MainViewModel.swift */,
-				366B66D32714AE2D00AAA57E /* MainViewBuilder.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -337,6 +379,8 @@
 			isa = PBXGroup;
 			children = (
 				36A05FD4270E2C3A00F48D99 /* CacheManagers */,
+				361206F82717469200DF683C /* CharacterListOperationsManagers */,
+				361206EC2717065800DF683C /* UserDefaultsHelperManagers */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -355,6 +399,7 @@
 				36B8E148270C84A200801F62 /* AssetHelpers */,
 				36604E562712274500383A36 /* Extensions */,
 				36B8E14B270C84A200801F62 /* FontManagers */,
+				361206E72717026900DF683C /* UserDefaultsHelpers */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -456,10 +501,10 @@
 			isa = PBXGroup;
 			children = (
 				366B66CB2714AE2D00AAA57E /* CharacterList */,
-				366B66D02714AE2D00AAA57E /* Main */,
 				36DCC55D270CB37D00DBFAFE /* Favorites */,
 				36C30B5D2710B6D5008218BA /* GenericImageContainer */,
 				36C30B492710B37A008218BA /* Jumping */,
+				366B66D02714AE2D00AAA57E /* Main */,
 				36DCC4DD270CA67600DBFAFE /* MainTabBar */,
 				36A05FA7270DF7CB00F48D99 /* TableView */,
 				36C30B5C2710B6B6008218BA /* Tutorial */,
@@ -512,6 +557,9 @@
 			name = UIComponents;
 			packageProductDependencies = (
 				36A05FA5270DEAE000F48D99 /* DefaultNetworkOperationPackage */,
+				361206F22717462D00DF683C /* RxCocoa */,
+				361206F42717462D00DF683C /* RxRelay */,
+				361206F62717462D00DF683C /* RxSwift */,
 			);
 			productName = UIComponents;
 			productReference = 364F73A9270C67F80047D23D /* UIComponents.app */;
@@ -587,6 +635,7 @@
 			mainGroup = 364F73A0270C67F80047D23D;
 			packageReferences = (
 				36A05FA4270DEAE000F48D99 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */,
+				361206F12717462D00DF683C /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 364F73AA270C67F80047D23D /* Products */;
 			projectDirPath = "";
@@ -638,6 +687,7 @@
 				36C30B592710B425008218BA /* ForthPageViewController.swift in Sources */,
 				36C14098270F42A500988429 /* MarvelCharactersResponse.swift in Sources */,
 				36604E582712275900383A36 /* UIApplication+Extension.swift in Sources */,
+				361206FA271746D600DF683C /* CharacterListOperationsProtocol.swift in Sources */,
 				364F73B1270C67F80047D23D /* ViewController.swift in Sources */,
 				36A05FC4270E279000F48D99 /* BaseTableViewCell.swift in Sources */,
 				36C30B572710B409008218BA /* ThirdPageViewController.swift in Sources */,
@@ -658,6 +708,7 @@
 				36A05FC8270E2AE400F48D99 /* LabelPackComponentData.swift in Sources */,
 				36DCC55F270CB39B00DBFAFE /* FavoriteViewController.swift in Sources */,
 				36B8E158270C84A200801F62 /* BaseViewController.swift in Sources */,
+				361206E92717029C00DF683C /* UserDefaultsWrapperHelper.swift in Sources */,
 				364F73AD270C67F80047D23D /* AppDelegate.swift in Sources */,
 				36CBC12C2715E4D600D26507 /* CustomImageViewComponent.swift in Sources */,
 				36604E5327120D5100383A36 /* GenericContainerData.swift in Sources */,
@@ -669,6 +720,7 @@
 				366B66DE2714AE7900AAA57E /* CharacterListDataFormatter.swift in Sources */,
 				36604E492712072800383A36 /* GenericImageContainerViewController.swift in Sources */,
 				366B66DA2714AE2D00AAA57E /* MainViewBuilder.swift in Sources */,
+				361206F0271706E600DF683C /* ApplicationGeneralInfoManager.swift in Sources */,
 				36A05FB8270E04BE00F48D99 /* ItemListView.swift in Sources */,
 				36604E4D2712073800383A36 /* GenericImageContainerBuilder.swift in Sources */,
 				36A05FBD270E1D4C00F48D99 /* ItemListProtocol.swift in Sources */,
@@ -676,7 +728,9 @@
 				36604E512712076900383A36 /* PageViewDataProtocol.swift in Sources */,
 				36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */,
 				366B66D72714AE2D00AAA57E /* CharacterListViewBuilder.swift in Sources */,
+				361206EB2717054700DF683C /* TutorialViewInfoStore.swift in Sources */,
 				36C30B5F2710B7A2008218BA /* TutorialViewController.swift in Sources */,
+				361206EE2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift in Sources */,
 				36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */,
 				364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */,
 				36A05FAD270DF8C100F48D99 /* TableViewController.swift in Sources */,
@@ -1044,6 +1098,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		361206F12717462D00DF683C /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
 		36A05FA4270DEAE000F48D99 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/erkutbas/DefaultNetworkOperationPackage";
@@ -1055,6 +1117,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		361206F22717462D00DF683C /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 361206F12717462D00DF683C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		361206F42717462D00DF683C /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 361206F12717462D00DF683C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		361206F62717462D00DF683C /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 361206F12717462D00DF683C /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
 		36A05FA5270DEAE000F48D99 /* DefaultNetworkOperationPackage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 36A05FA4270DEAE000F48D99 /* XCRemoteSwiftPackageReference "DefaultNetworkOperationPackage" */;

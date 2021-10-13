@@ -19,6 +19,19 @@ class TutorialViewController: BaseViewController<TutorialViewModel> {
         setViewControllers()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // setTutorialHasSeen()
+        viewModel.killTutorialView()
+    }
+    
+    /**
+     private func setTutorialHasSeen() {
+         UserDefaults.standard.set(true, forKey: "hasTutorialSeen")
+     }
+     */
+
+    
     private func addPageViewController() {
 
         pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)

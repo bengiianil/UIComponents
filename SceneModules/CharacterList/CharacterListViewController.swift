@@ -11,6 +11,8 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
 
     deinit {
         print("DEINIT: CharacterListViewController")
+        // After observing and listening operation, clear the memory with remove func
+        NotificationCenter.default.removeObserver(self, name: .notificationName, object: nil)
     }
     
     private var itemListView: ItemListView!
@@ -23,9 +25,10 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
         
         // Listen view states
         subscribeViewModelListeners()
+        addObserver()
         
         // To access the data
-        viewModel.getCharacterList()
+        // viewModel.getCharacterList()
     }
     private func addItemListView() {
         
@@ -51,7 +54,7 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
             switch state {
             case .done:
                 print("Data is ready.")
-                self?.itemListView.reloadTableView()
+                // self?.itemListView.reloadTableView()
             case .loading:
                 print("Data is getting.")
             case .failure:
@@ -60,5 +63,25 @@ class CharacterListViewController: BaseViewController<CharacterListViewModel> {
             }
         }
     }
+    
+    private func addObserver() {
+        NotificationCenter.default.addObserver(self, selector: .notificationAction, name: .notificationName, object: nil)
+    }
+    
+    @objc fileprivate func notificationAction(_ sender: Notification) {
+        print("\(#function)") // it prints this function name
+        itemListView.reloadTableView()
+    }
 }
 
+// MARK: - Notification Name Extensions
+extension Notification.Name {
+    static let notificationName = Notification.Name("NotificationOperation")
+    static let getDataByUsingExternalInteractions = Notification.Name("getDataByUsingExternalInteractions")
+
+}
+
+// MARK: - Selector Extensions
+extension Selector {
+    static let notificationAction = #selector(CharacterListViewController.notificationAction)
+}
