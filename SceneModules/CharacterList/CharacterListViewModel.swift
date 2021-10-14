@@ -7,25 +7,33 @@
 
 import Foundation
 import DefaultNetworkOperationPackage
+import RxSwift
 
-extension Selector {
-    static let fireDataFlow = #selector(CharacterListViewModel.fireDataFlow)
-}
+/**
+ extension Selector {
+     static let fireDataFlow = #selector(CharacterListViewModel.fireDataFlow)
+ }
+ */
 
 class CharacterListViewModel {
     
     deinit {
         print("DEINIT: CharacterListViewModel")
-        NotificationCenter.default.removeObserver(self, name: .getDataByUsingExternalInteractions, object: nil)
+        // NotificationCenter.default.removeObserver(self, name: .getDataByUsingExternalInteractions, object: nil)
     }
     
+    private let disposeBag = DisposeBag()
+    
     private let formatter: CharacterListDataFormatterProtocol
+    private let operationManager: CharacterListOperationsProtocol
     private var data: CharacterDataResponse?
     private var state: CharacterListViewStateBlock?
     
-    init(formatter: CharacterListDataFormatterProtocol) {
+    init(formatter: CharacterListDataFormatterProtocol, operationManager: CharacterListOperationsProtocol) {
         self.formatter = formatter
-        addExternalUserInteractions()
+        self.operationManager = operationManager
+        // addExternalUserInteractions()
+        subscribeOperationManagerPublisher()
     }
     
     func subscribeState(completion: @escaping CharacterListViewStateBlock) {
@@ -33,72 +41,41 @@ class CharacterListViewModel {
     }
     
     func getCharacterList() {
-        
         state?(.loading)
-        fireApiCall(with: apiCallHandler)
-        
-        /**
-        DispatchQueue.main.asyncAfter(deadline: .now()+2) { [weak self] in
-            self?.fireApiCall { [weak self] result in
-                switch result {
-                case .success(let response):
-                    print("response: \(response)")
-                case .failure(let error):
-                    print("error: \(error)")
-                }
-                self?.state?(.done)
-            }
-        }
-        */
-    }
-    
-    private func fireApiCall(with completion: @escaping (Result<CharacterDataResponse, ErrorResponse>) -> Void) {
-        /**
-         guard let url = URL(string: "https://gateway.marvel.com/v1/public/characters?ts=8F46CC9B-4885-4D8D-9761-9092B84D4C5A&apikey=b1b6a2c675b36a5e44800a4fbaa2fb8e&hash=68cb7ec069de76b37db17dc7e2aa5b5c&offset=0&limit=30") else { return }
-         
-         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 60)
-         request.httpMethod = "GET"
-         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-         
-         APIManager.shared.executeRequest(urlRequest: , completion: completion)
-         */
-
-        do {
-            let urlRequest = try MarvelCharactersApiServiceProvider().returnUrlRequest()
-            APIManager.shared.executeRequest(urlRequest: urlRequest, completion: completion)
-        } catch let error {
-            print("error : \(error)")
-        }
+        // fireApiCall(with: apiCallHandler)
+        operationManager.getCharacterListData()
     }
     
     private func dataHandler(with response: CharacterDataResponse) {
         data = response
         state?(.done)
-        fireNotificationCenter() 
+        // fireNotificationCenter() 
     }
     
-    private func fireNotificationCenter() {
-        NotificationCenter.default.post(name: .notificationName, object: nil)
+    private func subscribeOperationManagerPublisher() {
+        operationManager.subscribeDataPublisher { [weak self] result in
+            switch result {
+            case .failure(let error):
+                print("error : \(error)")
+            case .success(let response):
+                print("success")
+                self?.dataHandler(with: response)
+            }
+        }.disposed(by: disposeBag)
     }
-    
-    private func addExternalUserInteractions() {
-        NotificationCenter.default.addObserver(self, selector: .fireDataFlow, name: .getDataByUsingExternalInteractions, object: nil)
-    }
-    @objc func fireDataFlow(_ sender: Notification) {
-        getCharacterList()
-    }
-    
-    // MARK: - CallBack Listener
-    private lazy var apiCallHandler: (Result<CharacterDataResponse, ErrorResponse>) -> Void = { [weak self] result in
-        // to show how to handle error .....
-        switch result {
-        case .failure(let error):
-            print("error : \(error)")
-            self?.state?(.failure)
-        case .success(let data):
-            self?.dataHandler(with: data)
-        }
-    }
+   
+    /**
+     private func fireNotificationCenter() {
+         NotificationCenter.default.post(name: .notificationName, object: nil)
+     }
+     private func addExternalUserInteractions() {
+         NotificationCenter.default.addObserver(self, selector: .fireDataFlow, name: .getDataByUsingExternalInteractions, object: nil)
+     }
+     @objc func fireDataFlow(_ sender: Notification) {
+         getCharacterList()
+     }
+     */
+
 }
 
 extension CharacterListViewModel: ItemListProtocol {

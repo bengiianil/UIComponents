@@ -15,6 +15,7 @@
 		361206F52717462D00DF683C /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 361206F42717462D00DF683C /* RxRelay */; };
 		361206F72717462D00DF683C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 361206F62717462D00DF683C /* RxSwift */; };
 		361206FA271746D600DF683C /* CharacterListOperationsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */; };
+		361206FC2717497D00DF683C /* CharacterListOperationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361206FB2717497D00DF683C /* CharacterListOperationsManager.swift */; };
 		364F73AD270C67F80047D23D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73AC270C67F80047D23D /* AppDelegate.swift */; };
 		364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73AE270C67F80047D23D /* SceneDelegate.swift */; };
 		364F73B1270C67F80047D23D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 364F73B0270C67F80047D23D /* ViewController.swift */; };
@@ -105,6 +106,7 @@
 		361206ED2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoProtocol.swift; sourceTree = "<group>"; };
 		361206EF271706E600DF683C /* ApplicationGeneralInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationGeneralInfoManager.swift; sourceTree = "<group>"; };
 		361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsProtocol.swift; sourceTree = "<group>"; };
+		361206FB2717497D00DF683C /* CharacterListOperationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsManager.swift; sourceTree = "<group>"; };
 		364F73A9270C67F80047D23D /* UIComponents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIComponents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		364F73AC270C67F80047D23D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		364F73AE270C67F80047D23D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */,
+				361206FB2717497D00DF683C /* CharacterListOperationsManager.swift */,
 			);
 			path = CharacterListOperationsManagers;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */,
 				36A05FAD270DF8C100F48D99 /* TableViewController.swift in Sources */,
 				36DCC561270CB3B700DBFAFE /* FavoriteViewModel.swift in Sources */,
+				361206FC2717497D00DF683C /* CharacterListOperationsManager.swift in Sources */,
 				366B66D82714AE2D00AAA57E /* MainViewController.swift in Sources */,
 				36CBC12D2715E4D600D26507 /* CustomImageLoadingType.swift in Sources */,
 				366B66D52714AE2D00AAA57E /* CharacterListViewState.swift in Sources */,
