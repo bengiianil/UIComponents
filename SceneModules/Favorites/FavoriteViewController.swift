@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import Combine
 
 fileprivate extension Selector {
     static var getDataAction = #selector(FavoriteViewController.getDataAction)
@@ -15,7 +16,8 @@ fileprivate extension Selector {
 class FavoriteViewController: BaseViewController<FavoriteViewModel> {
 
     private let disposeBag = DisposeBag()
-    
+    private var subscriptions = Set<AnyCancellable>()
+
     private lazy var button: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -48,7 +50,7 @@ class FavoriteViewController: BaseViewController<FavoriteViewModel> {
             DispatchQueue.main.async {
                 self?.dataFlowHandler(with: retrieved)
             }
-        }.disposed(by: disposeBag)
+        }.store(in: &subscriptions) // .disposed(by: disposeBag)
     }
     
     private func dataFlowHandler(with value: Bool) {

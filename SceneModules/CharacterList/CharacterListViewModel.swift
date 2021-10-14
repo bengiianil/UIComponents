@@ -8,6 +8,7 @@
 import Foundation
 import DefaultNetworkOperationPackage
 import RxSwift
+import Combine
 
 /**
  extension Selector {
@@ -16,6 +17,8 @@ import RxSwift
  */
 
 class CharacterListViewModel {
+    
+    private var subscriptions = Set<AnyCancellable>()
     
     deinit {
         print("DEINIT: CharacterListViewModel")
@@ -26,12 +29,14 @@ class CharacterListViewModel {
     
     private let formatter: CharacterListDataFormatterProtocol
     private let operationManager: CharacterListOperationsRxProtocol
+    private let operationManagerCombine: CharacterListOperationsCombineProtocol
     private var data: CharacterDataResponse?
     private var state: CharacterListViewStateBlock?
     
-    init(formatter: CharacterListDataFormatterProtocol, operationManager: CharacterListOperationsRxProtocol) {
+    init(formatter: CharacterListDataFormatterProtocol, operationManager: CharacterListOperationsRxProtocol, operationManagerCombine: CharacterListOperationsCombineProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
+        self.operationManagerCombine = operationManagerCombine
         // addExternalUserInteractions()
         subscribeOperationManagerPublisher()
     }
@@ -43,7 +48,8 @@ class CharacterListViewModel {
     func getCharacterList() {
         state?(.loading)
         // fireApiCall(with: apiCallHandler)
-        operationManager.getCharacterListData()
+        // operationManager.getCharacterListData()
+        operationManagerCombine.getCharacterListData()
     }
     
     private func dataHandler(with response: CharacterDataResponse) {
@@ -53,7 +59,8 @@ class CharacterListViewModel {
     }
     
     private func subscribeOperationManagerPublisher() {
-        operationManager.subscribeDataPublisher { [weak self] result in
+        
+        operationManagerCombine.subscribeDataPublisher { [weak self] result in
             switch result {
             case .failure(let error):
                 print("error : \(error)")
@@ -61,7 +68,19 @@ class CharacterListViewModel {
                 print("success")
                 self?.dataHandler(with: response)
             }
-        }.disposed(by: disposeBag)
+        }.store(in: &subscriptions)
+        
+        /**
+         operationManager.subscribeDataPublisher { [weak self] result in
+             switch result {
+             case .failure(let error):
+                 print("error : \(error)")
+             case .success(let response):
+                 print("success")
+                 self?.dataHandler(with: response)
+             }
+         }.disposed(by: disposeBag)
+         */
     }
    
     /**

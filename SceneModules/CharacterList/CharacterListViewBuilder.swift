@@ -13,7 +13,8 @@ class CharacterListViewBuilder {
         
         let characterListFormatter = CharacterListDataFormatter()
         let manager = CharacterListOperationsRxManager.shared
-        let viewModel = CharacterListViewModel(formatter: characterListFormatter, operationManager: manager)
+        let managerCombine = CharacterListOperationsCombineManager.shared
+        let viewModel = CharacterListViewModel(formatter: characterListFormatter, operationManager: manager, operationManagerCombine: managerCombine)
         let viewController = CharacterListViewController(viewModel: viewModel)
         return viewController
     }

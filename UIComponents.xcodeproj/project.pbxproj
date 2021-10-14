@@ -53,7 +53,7 @@
 		36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */; };
 		36A05FD6270E2C5200F48D99 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */; };
 		36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */; };
-		36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */; };
+		36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManager.swift */; };
 		36B8E156270C84A200801F62 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14C270C84A200801F62 /* FontManager.swift */; };
 		36B8E157270C84A200801F62 /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14E270C84A200801F62 /* GenericValueProtocol.swift */; };
 		36B8E158270C84A200801F62 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14F270C84A200801F62 /* BaseViewController.swift */; };
@@ -82,6 +82,7 @@
 		36DCC55F270CB39B00DBFAFE /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC55E270CB39B00DBFAFE /* FavoriteViewController.swift */; };
 		36DCC561270CB3B700DBFAFE /* FavoriteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC560270CB3B700DBFAFE /* FavoriteViewModel.swift */; };
 		36DCC563270CB3CF00DBFAFE /* FavoriteViewBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DCC562270CB3CF00DBFAFE /* FavoriteViewBuilder.swift */; };
+		36F3E955271862EF00E6DB63 /* CharacterListOperationsCombineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36F3E954271862EF00E6DB63 /* CharacterListOperationsCombineProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -148,7 +149,7 @@
 		36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPackComponent.swift; sourceTree = "<group>"; };
 		36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellData.swift; sourceTree = "<group>"; };
-		36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsCombineManagers.swift; sourceTree = "<group>"; };
+		36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsCombineManager.swift; sourceTree = "<group>"; };
 		36B8E14C270C84A200801F62 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		36B8E14E270C84A200801F62 /* GenericValueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		36B8E14F270C84A200801F62 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -177,6 +178,7 @@
 		36DCC55E270CB39B00DBFAFE /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
 		36DCC560270CB3B700DBFAFE /* FavoriteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewModel.swift; sourceTree = "<group>"; };
 		36DCC562270CB3CF00DBFAFE /* FavoriteViewBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewBuilder.swift; sourceTree = "<group>"; };
+		36F3E954271862EF00E6DB63 /* CharacterListOperationsCombineProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsCombineProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -402,7 +404,8 @@
 		36AB8EE227185947005F1F03 /* CharacterListOperationsCombineManagers */ = {
 			isa = PBXGroup;
 			children = (
-				36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */,
+				36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManager.swift */,
+				36F3E954271862EF00E6DB63 /* CharacterListOperationsCombineProtocol.swift */,
 			);
 			path = CharacterListOperationsCombineManagers;
 			sourceTree = "<group>";
@@ -747,6 +750,7 @@
 				361206EE2717067D00DF683C /* ApplicationGeneralInfoProtocol.swift in Sources */,
 				36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */,
 				364F73AF270C67F80047D23D /* SceneDelegate.swift in Sources */,
+				36F3E955271862EF00E6DB63 /* CharacterListOperationsCombineProtocol.swift in Sources */,
 				36A05FAD270DF8C100F48D99 /* TableViewController.swift in Sources */,
 				36DCC561270CB3B700DBFAFE /* FavoriteViewModel.swift in Sources */,
 				361206FC2717497D00DF683C /* CharacterListOperationsRxManager.swift in Sources */,
@@ -754,7 +758,7 @@
 				36CBC12D2715E4D600D26507 /* CustomImageLoadingType.swift in Sources */,
 				366B66D52714AE2D00AAA57E /* CharacterListViewState.swift in Sources */,
 				36DCC55C270CB27400DBFAFE /* TabBarImages.swift in Sources */,
-				36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift in Sources */,
+				36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManager.swift in Sources */,
 				36C30B532710B3F0008218BA /* SecondPageViewController.swift in Sources */,
 				366B66D42714AE2D00AAA57E /* CharacterListViewController.swift in Sources */,
 				36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */,

@@ -12,7 +12,8 @@ class FavoriteViewBuilder{
     class func build() -> UIViewController {
         
         let manager = CharacterListOperationsRxManager.shared
-        let viewModel = FavoriteViewModel(operationManager: manager)
+        let managerCombine = CharacterListOperationsCombineManager.shared
+        let viewModel = FavoriteViewModel(operationManager: manager, operationManagerCombine: managerCombine)
         let viewController = FavoriteViewController(viewModel: viewModel)
         viewController.title = "Favorite"
         viewController.tabBarItem.image = TabBarImages.favorite.value
