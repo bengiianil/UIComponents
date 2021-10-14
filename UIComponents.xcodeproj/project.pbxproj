@@ -53,6 +53,7 @@
 		36A05FC9270E2AE400F48D99 /* LabelPackComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */; };
 		36A05FD6270E2C5200F48D99 /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */; };
 		36A05FD8270E36E500F48D99 /* ItemTableViewCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */; };
+		36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */; };
 		36B8E156270C84A200801F62 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14C270C84A200801F62 /* FontManager.swift */; };
 		36B8E157270C84A200801F62 /* GenericValueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14E270C84A200801F62 /* GenericValueProtocol.swift */; };
 		36B8E158270C84A200801F62 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36B8E14F270C84A200801F62 /* BaseViewController.swift */; };
@@ -147,6 +148,7 @@
 		36A05FC7270E2AE400F48D99 /* LabelPackComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPackComponent.swift; sourceTree = "<group>"; };
 		36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		36A05FD7270E36E500F48D99 /* ItemTableViewCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCellData.swift; sourceTree = "<group>"; };
+		36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListOperationsCombineManagers.swift; sourceTree = "<group>"; };
 		36B8E14C270C84A200801F62 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		36B8E14E270C84A200801F62 /* GenericValueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericValueProtocol.swift; sourceTree = "<group>"; };
 		36B8E14F270C84A200801F62 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -224,13 +226,13 @@
 			path = UserDefaultsHelperManagers;
 			sourceTree = "<group>";
 		};
-		361206F82717469200DF683C /* CharacterListOperationsManagers */ = {
+		361206F82717469200DF683C /* CharacterListOperationsRxManagers */ = {
 			isa = PBXGroup;
 			children = (
 				361206F9271746D600DF683C /* CharacterListOperationsProtocol.swift */,
 				361206FB2717497D00DF683C /* CharacterListOperationsManager.swift */,
 			);
-			path = CharacterListOperationsManagers;
+			path = CharacterListOperationsRxManagers;
 			sourceTree = "<group>";
 		};
 		364F73A0270C67F80047D23D = {
@@ -382,7 +384,8 @@
 			isa = PBXGroup;
 			children = (
 				36A05FD4270E2C3A00F48D99 /* CacheManagers */,
-				361206F82717469200DF683C /* CharacterListOperationsManagers */,
+				36AB8EE227185947005F1F03 /* CharacterListOperationsCombineManagers */,
+				361206F82717469200DF683C /* CharacterListOperationsRxManagers */,
 				361206EC2717065800DF683C /* UserDefaultsHelperManagers */,
 			);
 			path = Managers;
@@ -394,6 +397,14 @@
 				36A05FD5270E2C5200F48D99 /* ImageCacheManager.swift */,
 			);
 			path = CacheManagers;
+			sourceTree = "<group>";
+		};
+		36AB8EE227185947005F1F03 /* CharacterListOperationsCombineManagers */ = {
+			isa = PBXGroup;
+			children = (
+				36AB8EE327185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift */,
+			);
+			path = CharacterListOperationsCombineManagers;
 			sourceTree = "<group>";
 		};
 		36B8E142270C84A200801F62 /* Utilities */ = {
@@ -743,6 +754,7 @@
 				36CBC12D2715E4D600D26507 /* CustomImageLoadingType.swift in Sources */,
 				366B66D52714AE2D00AAA57E /* CharacterListViewState.swift in Sources */,
 				36DCC55C270CB27400DBFAFE /* TabBarImages.swift in Sources */,
+				36AB8EE427185BFB005F1F03 /* CharacterListOperationsCombineManagers.swift in Sources */,
 				36C30B532710B3F0008218BA /* SecondPageViewController.swift in Sources */,
 				366B66D42714AE2D00AAA57E /* CharacterListViewController.swift in Sources */,
 				36DCC4E1270CA6D500DBFAFE /* MainTabBarBuilder.swift in Sources */,
