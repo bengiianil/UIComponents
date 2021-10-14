@@ -11,7 +11,7 @@ class FavoriteViewBuilder{
     
     class func build() -> UIViewController {
         
-        let manager = CharacterListOperationsManager.shared
+        let manager = CharacterListOperationsRxManager.shared
         let viewModel = FavoriteViewModel(operationManager: manager)
         let viewController = FavoriteViewController(viewModel: viewModel)
         viewController.title = "Favorite"

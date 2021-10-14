@@ -25,11 +25,11 @@ class CharacterListViewModel {
     private let disposeBag = DisposeBag()
     
     private let formatter: CharacterListDataFormatterProtocol
-    private let operationManager: CharacterListOperationsProtocol
+    private let operationManager: CharacterListOperationsRxProtocol
     private var data: CharacterDataResponse?
     private var state: CharacterListViewStateBlock?
     
-    init(formatter: CharacterListDataFormatterProtocol, operationManager: CharacterListOperationsProtocol) {
+    init(formatter: CharacterListDataFormatterProtocol, operationManager: CharacterListOperationsRxProtocol) {
         self.formatter = formatter
         self.operationManager = operationManager
         // addExternalUserInteractions()

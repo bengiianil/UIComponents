@@ -10,9 +10,9 @@ import RxSwift
 
 class FavoriteViewModel {
         
-    private let operationManager: CharacterListOperationsProtocol
+    private let operationManager: CharacterListOperationsRxProtocol
     
-    init(operationManager: CharacterListOperationsProtocol) {
+    init(operationManager: CharacterListOperationsRxProtocol) {
         self.operationManager = operationManager
     }
     

@@ -12,9 +12,9 @@ import RxSwift
 typealias CharacterListResult = Result<CharacterDataResponse, ErrorResponse>
 typealias CharacterListResultBlock = (Result<CharacterDataResponse, ErrorResponse>) -> Void
 
-class CharacterListOperationsManager: CharacterListOperationsProtocol {
+class CharacterListOperationsRxManager: CharacterListOperationsRxProtocol {
     
-    public static let shared = CharacterListOperationsManager()
+    public static let shared = CharacterListOperationsRxManager()
     
     private let dataPublishSubject = PublishSubject<CharacterListResult>()
     private let dataFlowSubject = PublishSubject<Bool>()

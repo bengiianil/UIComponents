@@ -1,14 +1,14 @@
 //
-//  CharacterListOperationsProtocol.swift
+//  CharacterListOperationsRxProtocol.swift
 //  UIComponents
 //
-//  Created by Bengi on 13.10.2021.
+//  Created by Bengi on 14.10.2021.
 //
 
 import Foundation
 import RxSwift
 
-protocol CharacterListOperationsProtocol {
+protocol CharacterListOperationsRxProtocol {
     
     func getCharacterListData()
     
